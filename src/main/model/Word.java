@@ -41,6 +41,18 @@ public class Word {
         }
     }
 
+    //Requires: a Word that has been checked
+    //Modifies:...
+    //Effects: produce TRUE if word has been guessed. IE result = {'G','G','G','G','G'}. Else FALSE
+    public boolean isSolved() {
+        for (int i = 0; i <= MAXINDEX; i++) {
+            if (this.result[i] != 'G') {
+                return FALSE;
+            }
+        }
+        return TRUE;
+    }
+
     //Requires: a character and a 5-letter Word
     //Modifies: ...
     //Effects: return True if the given character is found in the Word at the 2nd, 3rd, 4th, or 5th position, else False
@@ -62,15 +74,5 @@ public class Word {
     }
 
 
-    //Requires: a Word that has been checked
-    //Modifies:...
-    //Effects: produce TRUE if word has been guessed. IE result = {'G','G','G','G','G'}. Else FALSE
-    public boolean isSolved() {
-        for (int i = 0; i <= MAXINDEX; i++) {
-            if (this.result[i] != 'G') {
-                return FALSE;
-            }
-        }
-        return TRUE;
-    }
+
 }
