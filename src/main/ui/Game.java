@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Game {
-
     private Scanner scanner;
     private List<Word> wordLog;
 
@@ -30,12 +29,12 @@ public class Game {
                 System.out.println("Please enter a 5-letter word!!!");
                 continue;
             }
-            stringGuess = stringGuess.toUpperCase();
-            wordGuess = new Word(stringGuess);
+            wordGuess = new Word(stringGuess.toUpperCase());
             wordGuess.checkWord();
             if (wordGuess.isSolved()) {
                 if (count == 1) {
-                    System.out.println("Congratulations! You have guessed the mystery word in one attempt. Impressive!");
+                    System.out.println("Congratulations! You have guessed the mystery word in one attempt."
+                            + "Impressive!");
                     break;
                 } else {
                     System.out.println("Congratulations! You have guessed the mystery word in " + count + " attempts");

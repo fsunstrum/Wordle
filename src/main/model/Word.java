@@ -12,6 +12,21 @@ public class Word {
     char[] result;
 
     static int MAXINDEX = 4;
+    static final List<String> wordBank = new ArrayList<String>() {
+        {
+            add("PLANT");
+            add("HORSE");
+            add("CORKS");
+            add("VENUE");
+            add("GREAT");
+            add("CRAMP");
+            add("PRANK");
+            add("QUEST");
+            add("BLUNT");
+            add("WORSE");
+        }
+    };
+
     static String SAMPLEWORD = "PLANT";
 
     //Requires: a five-letter word
@@ -72,7 +87,6 @@ public class Word {
     public char[] getResults() {
         return this.result;
     }
-
 
 
 }
