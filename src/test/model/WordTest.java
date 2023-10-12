@@ -60,4 +60,11 @@ public class WordTest {
         testWord5.checkWord();
         assertTrue(testWord5.isSolved());
     }
+
+    @Test
+    void getResultTest(){
+        testWord1.checkWord();
+        assertArrayEquals(new char[]{'R', 'R', 'G', 'G', 'R'}, testWord1.getResults());
+
+    }
 }
