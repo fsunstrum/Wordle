@@ -22,6 +22,6 @@ As a word puzzle enthusiast myself, I look forward to figuring out how such a pu
 
 - I want to be able to enter individual letters on the game board to form a five-letter word
 - I want to be able to submit my word
-- I want to be a able to receive feedback on whether the entered letters are present in the mystery word
+- I want to be able to receive feedback on whether the entered letters are present in the mystery word
   - I want to be able to receive feedback on whether the present letter(s) are already in the right position
 - I want to be able to view a graph of my previous games, showing trends in how many guesses I needed to find the mystery word

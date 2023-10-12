@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Game {
     private Scanner scanner;
+    private List<String> wordBank = new ArrayList<>();
     private List<Word> wordLog;
 
     public Game() {
@@ -17,12 +18,13 @@ public class Game {
         runGame();
     }
 
+    @SuppressWarnings({"checkstyle:MethodLength", "checkstyle:SuppressWarnings"})
     private void runGame() {
         String stringGuess;
         Word wordGuess;
         int count = 1;
 
-        init();
+        printInstructions();
         while (true) {
             stringGuess = scanner.nextLine();
             if (stringGuess.length() != 5) {
@@ -31,6 +33,7 @@ public class Game {
             }
             wordGuess = new Word(stringGuess.toUpperCase());
             wordGuess.checkWord();
+            wordLog.add(wordGuess);
             if (wordGuess.isSolved()) {
                 if (count == 1) {
                     System.out.println("Congratulations! You have guessed the mystery word in one attempt."
@@ -38,6 +41,10 @@ public class Game {
                     break;
                 } else {
                     System.out.println("Congratulations! You have guessed the mystery word in " + count + " attempts");
+                    System.out.println("Here are the words you guessed:");
+                    for (Word w : wordLog) {
+                        System.out.println(w.getWord());
+                    }
                     break;
                 }
             } else {
@@ -48,7 +55,12 @@ public class Game {
         }
     }
 
-    private void init() {
+    private void processInput(String guess) {
+        Word wordGuess = new Word(guess.toUpperCase());
+
+    }
+
+    private void printInstructions() {
         System.out.println("The goal is to guess a mystery five-letter word.");
         System.out.println("You will receive feedback based on each character you entered.");
         System.out.println("R means the letter is not in the word,");
