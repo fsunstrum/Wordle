@@ -52,7 +52,7 @@ public class Game {
 //                            + "Impressive!");
 //                    break;
 //                } else {
-//                    System.out.println("Congratulations! You have guessed the mystery word in " + count + "
+//                    System.out.println("Congratulations! You have guessed the mystery word in " + count + " 
 //                    attempts");
 //                    System.out.println("Here are the words you guessed:");
 //                    for (Word w : wordLog) {
@@ -68,7 +68,6 @@ public class Game {
 //        }
 //    }
 
-    @SuppressWarnings({"checkstyle:MethodLength", "checkstyle:SuppressWarnings"})
     private void runGame() {
         printInstructions();
         int count = 0;
@@ -84,19 +83,23 @@ public class Game {
             wordGuess.checkWord(mystString);
             wordLog.addWord(wordGuess);
             if (wordGuess.isSolved()) {
-                System.out.println("Congratulations! You guessed the mystery word in "
-                        + (count + 1) + " attempt" + (count == 0 ? "." : "s"));
-                if (count > 0) {
-                    System.out.println("Here are the words you guessed:");
-                    for (Word w : wordLog.getWords()) {
-                        System.out.println(w.getWord());
-                    }
-                }
+                congratulate(count);
                 break;
             } else {
                 System.out.println(wordGuess.getResults());
                 System.out.println("Please enter your next guess (must be a 5-letter word):");
                 count++;
+            }
+        }
+    }
+
+    private void congratulate(int count) {
+        System.out.println("Congratulations! You guessed the mystery word in "
+                + (count + 1) + " attempt" + (count == 0 ? "." : "s"));
+        if (count > 0) {
+            System.out.println("Here are the words you guessed:");
+            for (Word w : wordLog.getWords()) {
+                System.out.println(w.getWord());
             }
         }
     }
@@ -111,7 +114,5 @@ public class Game {
         System.out.println("Please enter your first guess (must be a 5-letter word):");
     }
 
-    private Word pickMysteryWord() {
-        return wordBank.getRandomWord();
-    }
+
 }

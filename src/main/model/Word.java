@@ -47,7 +47,7 @@ public class Word {
             if (this.word.charAt(index) == m.charAt(index)) {
                 this.result[index] = 'G';
             } else {
-                if (isPresent(this.word.charAt(index))) {
+                if (isPresent(this.word.charAt(index), m)) {
                     this.result[index] = 'Y';
                 } else {
                     this.result[index] = 'R';
@@ -71,9 +71,9 @@ public class Word {
     //Requires: a character and a 5-letter Word
     //Modifies: ...
     //Effects: return True if the given character is found in the Word, else False
-    public Boolean isPresent(char given) {
+    public Boolean isPresent(char given, String m) {
         for (int i = 0; i <= MAXINDEX; i++) {
-            if (SAMPLEWORD.charAt(i) == given) {
+            if (m.charAt(i) == given) {
                 return TRUE;
             }
         }
