@@ -7,21 +7,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class WordTest {
     private Word testMyst;
-    private Word testMyst2;
     private Word testWord1;
     private Word testWord2;
 
     @BeforeEach
     void runBefore() {
         testMyst = new Word("PLANT");
-        testMyst2 = new Word("CANOE");
         testWord1 = new Word("CRANE");
         testWord2 = new Word("CLOAK");
     }
 
     @Test
     void testConstructor() {
-        assertTrue(testMyst.word == "PLANT");
+        assertEquals("PLANT", testMyst.word);
         char[] res = testWord1.getResults();
         assertEquals(5, res.length);
     }
@@ -29,7 +27,6 @@ public class WordTest {
 
     @Test
     void checkWordTest() {
-        String given = testWord1.getWord();
         testWord1.checkWord("PLANT");
         char[] expectedResult1 = {'R', 'R', 'G', 'G', 'R'};
         assertArrayEquals(testWord1.result, expectedResult1);

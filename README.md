@@ -20,8 +20,7 @@ As a word puzzle enthusiast myself, I look forward to figuring out how such a pu
 
 ## User stories
 
-- I want to be able to enter individual letters on the game board to form a five-letter word
-- I want to be able to submit my word
-- I want to be able to receive feedback on whether the entered letters are present in the mystery word
-  - I want to be able to receive feedback on whether the present letter(s) are already in the right position
-- I want to be able to view a graph of my previous games, showing trends in how many guesses I needed to find the mystery word
+- I want to be able to enter a word and be told if it has the right number of letters
+- I want to receive feedback on which characters in my guessed word are in the right position, in the mystery word, or not present in the mystery word
+- After guessing the correct word, I want to know how many attempts I needed, and to see which words I entered
+- I want to replay the game with a new mystery word

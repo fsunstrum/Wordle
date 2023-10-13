@@ -5,12 +5,14 @@ import model.WordList;
 
 import java.util.Scanner;
 
+//WORDLE game remake
 public class Game {
     public final Scanner scanner;
     private WordList wordBank;
     private WordList wordLog;
 
 
+    //Effects: creates a new Game object and runs the game
     public Game() {
         wordLog = new WordList();
         wordBank = new WordList();
@@ -68,6 +70,8 @@ public class Game {
 //        }
 //    }
 
+    //Modifies: this
+    //Processes user input and provides feedback
     private void runGame() {
         printInstructions();
         int count = 0;
@@ -93,6 +97,8 @@ public class Game {
         }
     }
 
+    //Requires: count >= 0
+    //Effects: congratulates the user for solving the puzzle, and provides some recap information
     private void congratulate(int count) {
         System.out.println("Congratulations! You guessed the mystery word in "
                 + (count + 1) + " attempt" + (count == 0 ? "." : "s"));
@@ -105,6 +111,7 @@ public class Game {
     }
 
 
+    //Effects: Prints instructions to user
     private void printInstructions() {
         System.out.println("The goal is to guess a mystery five-letter word.");
         System.out.println("You will receive feedback based on each character you entered.");

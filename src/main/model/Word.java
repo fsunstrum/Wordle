@@ -1,37 +1,19 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
-
+//Represents a 5-letter word, and information on which of its characters are present in the mystery word.
 public class Word {
     String word;
     char[] result;
 
     static int MAXINDEX = 4;
-    static final List<String> wordBank = new ArrayList<String>() {
-        {
-            add("PLANT");
-            add("HORSE");
-            add("CORKS");
-            add("VENUE");
-            add("GREAT");
-            add("CRAMP");
-            add("PRANK");
-            add("QUEST");
-            add("BLUNT");
-            add("WORSE");
-        }
-    };
-
-    static String SAMPLEWORD = "PLANT";
 
     //Requires: a five-letter word
     //Modifies: this
-    //Effects: creates a new Word object with a value and an empty list of results
+    //Effects: creates a new Word object with a string value and an empty list of results
     public Word(String word) {
         this.word = word;
         this.result = new char[5];
@@ -57,7 +39,6 @@ public class Word {
     }
 
     //Requires: a Word that has been checked
-    //Modifies:...
     //Effects: produce TRUE if word has been guessed. IE result = {'G','G','G','G','G'}. Else FALSE
     public boolean isSolved() {
         for (int i = 0; i <= MAXINDEX; i++) {

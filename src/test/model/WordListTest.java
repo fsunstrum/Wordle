@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static model.Word.wordBank;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class WordListTest {
@@ -27,6 +26,8 @@ public class WordListTest {
         testWords.addWord(new Word("blobs"));
         assertEquals(1,testWords.wordListLength());
         testWords.addWord(new Word ("snake"));
+        assertEquals(2,testWords.wordListLength());
+        testWords.addWord(new Word ("snakes"));
         assertEquals(2,testWords.wordListLength());
     }
 
