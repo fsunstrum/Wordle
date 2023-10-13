@@ -1,52 +1,98 @@
 package ui;
 
 import model.Word;
+import model.WordList;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Game {
-    private Scanner scanner;
-    private List<String> wordBank = new ArrayList<>();
-    private List<Word> wordLog;
+    public final Scanner scanner;
+    private WordList wordBank;
+    private WordList wordLog;
+
 
     public Game() {
-        wordLog = new ArrayList<Word>();
+        wordLog = new WordList();
+        wordBank = new WordList();
+        wordBank.addWord(new Word("PLANT"));
+        wordBank.addWord(new Word("HORSE"));
+        wordBank.addWord(new Word("CORKS"));
+        wordBank.addWord(new Word("VENUE"));
+        wordBank.addWord(new Word("GREAT"));
+        wordBank.addWord(new Word("CRAMP"));
+        wordBank.addWord(new Word("PRANK"));
+        wordBank.addWord(new Word("QUEST"));
+        wordBank.addWord(new Word("BLUNT"));
+        wordBank.addWord(new Word("WORSE"));
+
         scanner = new Scanner(System.in);
         scanner.useDelimiter("\n");
         runGame();
     }
 
+
+//    private void runGame() {
+//        String stringGuess;
+//        Word wordGuess;
+//        int count = 1;
+//        printInstructions();
+//
+//        while (true) {
+//            stringGuess = scanner.nextLine();
+//            if (stringGuess.length() != 5) {
+//                System.out.println("Please enter a 5-letter word!!!");
+//                continue;
+//            }
+//            wordGuess = new Word(stringGuess.toUpperCase());
+//            wordGuess.checkWord();
+//            wordLog.add(wordGuess);
+//            if (wordGuess.isSolved()) {
+//                if (count == 1) {
+//                    System.out.println("Congratulations! You have guessed the mystery word in one attempt."
+//                            + "Impressive!");
+//                    break;
+//                } else {
+//                    System.out.println("Congratulations! You have guessed the mystery word in " + count + "
+//                    attempts");
+//                    System.out.println("Here are the words you guessed:");
+//                    for (Word w : wordLog) {
+//                        System.out.println(w.getWord());
+//                    }
+//                    break;
+//                }
+//            } else {
+//                System.out.println(wordGuess.getResults());
+//                System.out.println("Please enter your next guess (must be a 5-letter word):");
+//                count++;
+//            }
+//        }
+//    }
+
     @SuppressWarnings({"checkstyle:MethodLength", "checkstyle:SuppressWarnings"})
     private void runGame() {
-        String stringGuess;
-        Word wordGuess;
-        int count = 1;
-
         printInstructions();
+        int count = 0;
+        Word mystWord = wordBank.getRandomWord();
+        String mystString = mystWord.getWord();
         while (true) {
-            stringGuess = scanner.nextLine();
+            String stringGuess = scanner.nextLine();
             if (stringGuess.length() != 5) {
                 System.out.println("Please enter a 5-letter word!!!");
                 continue;
             }
-            wordGuess = new Word(stringGuess.toUpperCase());
-            wordGuess.checkWord();
-            wordLog.add(wordGuess);
+            Word wordGuess = new Word(stringGuess.toUpperCase());
+            wordGuess.checkWord(mystString);
+            wordLog.addWord(wordGuess);
             if (wordGuess.isSolved()) {
-                if (count == 1) {
-                    System.out.println("Congratulations! You have guessed the mystery word in one attempt."
-                            + "Impressive!");
-                    break;
-                } else {
-                    System.out.println("Congratulations! You have guessed the mystery word in " + count + " attempts");
+                System.out.println("Congratulations! You guessed the mystery word in "
+                        + (count + 1) + " attempt" + (count == 0 ? "." : "s"));
+                if (count > 0) {
                     System.out.println("Here are the words you guessed:");
-                    for (Word w : wordLog) {
+                    for (Word w : wordLog.getWords()) {
                         System.out.println(w.getWord());
                     }
-                    break;
                 }
+                break;
             } else {
                 System.out.println(wordGuess.getResults());
                 System.out.println("Please enter your next guess (must be a 5-letter word):");
@@ -55,10 +101,6 @@ public class Game {
         }
     }
 
-    private void processInput(String guess) {
-        Word wordGuess = new Word(guess.toUpperCase());
-
-    }
 
     private void printInstructions() {
         System.out.println("The goal is to guess a mystery five-letter word.");
@@ -67,5 +109,9 @@ public class Game {
         System.out.println("Y means the letter is in the word in another position,");
         System.out.println("and G means the letter is in the word at that position.");
         System.out.println("Please enter your first guess (must be a 5-letter word):");
+    }
+
+    private Word pickMysteryWord() {
+        return wordBank.getRandomWord();
     }
 }

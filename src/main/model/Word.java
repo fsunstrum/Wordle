@@ -42,9 +42,9 @@ public class Word {
     //Modifies: this
     //Effects: populates this.result with each letter's respective validity (G, Y, R). G for green, letter is in right
     //         position, Y for yellow, letter is in word but different position, R for Red, letter is not in word.
-    public void checkWord() {
+    public void checkWord(String m) {
         for (int index = 0; index <= MAXINDEX; index++) {
-            if (this.word.charAt(index) == SAMPLEWORD.charAt(index)) {
+            if (this.word.charAt(index) == m.charAt(index)) {
                 this.result[index] = 'G';
             } else {
                 if (isPresent(this.word.charAt(index))) {
@@ -70,7 +70,7 @@ public class Word {
 
     //Requires: a character and a 5-letter Word
     //Modifies: ...
-    //Effects: return True if the given character is found in the Word at the 2nd, 3rd, 4th, or 5th position, else False
+    //Effects: return True if the given character is found in the Word, else False
     public Boolean isPresent(char given) {
         for (int i = 0; i <= MAXINDEX; i++) {
             if (SAMPLEWORD.charAt(i) == given) {
