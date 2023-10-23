@@ -24,3 +24,6 @@ As a word puzzle enthusiast myself, I look forward to figuring out how such a pu
 - I want to receive feedback on which characters in my guessed word are in the right position, in the mystery word, or not present in the mystery word
 - After guessing the correct word, I want to know how many attempts I needed, and to see which words I entered
 - I want to replay the game with a new mystery word
+
+- I want to have the option of saving an in-progress game
+- I want the option to load a saved game when starting up a new game
