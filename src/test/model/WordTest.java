@@ -20,39 +20,39 @@ public class WordTest {
     @Test
     void testConstructor() {
         assertEquals("PLANT", testMyst.word);
-        char[] res = testWord1.getResults();
-        assertEquals(5, res.length);
+        String res = testWord1.getResults();
+        assertEquals(5, res.length());
     }
 
 
     @Test
     void checkWordTest() {
         testWord1.checkWord("PLANT");
-        char[] expectedResult1 = {'R', 'R', 'G', 'G', 'R'};
-        assertArrayEquals(testWord1.result, expectedResult1);
+        String expectedResult1 = "RRGGR";
+        assertEquals(testWord1.result, expectedResult1);
         testWord2.checkWord("PLANT");
-        char[] expectedResult2 = {'R', 'G', 'R', 'Y', 'R'};
-        assertArrayEquals(testWord2.result, expectedResult2);
+        String expectedResult2 = "RGRYR";
+        assertEquals(testWord2.result, expectedResult2);
 
         Word testWord3 = new Word("PPPPP");
-        char[] expectedResult3 = {'G', 'Y', 'Y', 'Y', 'Y'};
+        String expectedResult3 = "GYYYY";
         testWord3.checkWord("PLANT");
-        assertArrayEquals(testWord3.result, expectedResult3);
+        assertEquals(testWord3.result, expectedResult3);
 
         Word testWord4 = new Word("XXXXX");
-        char[] expectedResult4 = {'R', 'R', 'R', 'R', 'R'};
+        String expectedResult4 = "RRRRR";
         testWord4.checkWord("PLANT");
-        assertArrayEquals(testWord4.result, expectedResult4);
+        assertEquals(testWord4.result, expectedResult4);
 
         Word testWord5 = new Word("PLANT");
-        char[] expectedResult5 = {'G', 'G', 'G', 'G', 'G'};
+        String expectedResult5 = "GGGGG";
         testWord5.checkWord("PLANT");
-        assertArrayEquals(testWord5.result, expectedResult5);
+        assertEquals(testWord5.result, expectedResult5);
 
         Word testWord6 = new Word("PLANT");
-        char[] expectedResult6 = {'R', 'G', 'R', 'R', 'R'};
+        String expectedResult6 = "RGRRR";
         testWord6.checkWord("CLOCK");
-        assertArrayEquals(expectedResult6, testWord6.result);
+        assertEquals(expectedResult6, testWord6.result);
 
     }
 
@@ -77,7 +77,7 @@ public class WordTest {
     @Test
     void getResultTest() {
         testWord1.checkWord("PLANT");
-        assertArrayEquals(new char[]{'R', 'R', 'G', 'G', 'R'}, testWord1.getResults());
+        assertEquals("RRGGR", testWord1.getResults());
     }
 
     @Test

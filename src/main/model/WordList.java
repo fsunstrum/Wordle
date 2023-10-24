@@ -1,15 +1,32 @@
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import persistence.Writable;
+
 import java.util.ArrayList;
 
 //Represents a list of Words
-public class WordList {
+public class WordList implements Writable {
     private final ArrayList<Word> words;
+    private String mystWord;
 
     //Modifies: this
-    //Effects: creates a new empty WordList object
-    public WordList() {
+    //Effects: creates a new empty WordList object, with a null mystery word
+    public WordList(String m) {
         words = new ArrayList<>();
+        this.mystWord = m;
+    }
+
+    //Modifies: this
+    //Effects: sets the random mystery word
+    //public void setMystWord(String w) {
+//        String this.mystWord = w;
+//    }
+
+    //Effects: returns the mystry word associated with the current game
+    public String getMystWord() {
+        return this.mystWord;
     }
 
     //Modifies: this
@@ -36,5 +53,21 @@ public class WordList {
     public Word getRandomWord() {
         int index = (int) (Math.random() * (words.size()));
         return words.get(index);
+    }
+
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("words", wordsToJson());
+        json.put("mystWord",this.mystWord);
+        return json;
+    }
+
+    private JSONArray wordsToJson() {
+        JSONArray jsonArray = new JSONArray();
+        for (Word w : words) {
+            jsonArray.put(w.toJson());
+        }
+        return jsonArray;
     }
 }

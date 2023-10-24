@@ -1,13 +1,16 @@
 package model;
 
 
-import static java.lang.Boolean.FALSE;
-import static java.lang.Boolean.TRUE;
+import org.json.JSONObject;
+import persistence.Writable;
+
+import static java.lang.Boolean.*;
 
 //Represents a 5-letter word, and information on which of its characters are present in the mystery word.
-public class Word {
+public class Word implements Writable {
     String word;
-    char[] result;
+    String result;
+    boolean solved;
 
     static int MAXINDEX = 4;
 
@@ -16,7 +19,8 @@ public class Word {
     //Effects: creates a new Word object with a string value and an empty list of results
     public Word(String word) {
         this.word = word;
-        this.result = new char[5];
+        this.result = new String();
+        this.solved = false;
     }
 
 
@@ -25,28 +29,26 @@ public class Word {
     //Effects: populates this.result with each letter's respective validity (G, Y, R). G for green, letter is in right
     //         position, Y for yellow, letter is in word but different position, R for Red, letter is not in word.
     public void checkWord(String m) {
+        char[] values = new char[5];
         for (int index = 0; index <= MAXINDEX; index++) {
             if (this.word.charAt(index) == m.charAt(index)) {
-                this.result[index] = 'G';
+                values[index] = 'G';
             } else {
                 if (isPresent(this.word.charAt(index), m)) {
-                    this.result[index] = 'Y';
+                    values[index] = 'Y';
                 } else {
-                    this.result[index] = 'R';
+                    values[index] = 'R';
                 }
             }
         }
+        this.result = new String(values);
     }
 
     //Requires: a Word that has been checked
     //Effects: produce TRUE if word has been guessed. IE result = {'G','G','G','G','G'}. Else FALSE
     public boolean isSolved() {
-        for (int i = 0; i <= MAXINDEX; i++) {
-            if (this.result[i] != 'G') {
-                return FALSE;
-            }
-        }
-        return TRUE;
+        this.solved = this.result.equals("GGGGG");
+        return this.solved;
     }
 
     //Requires: a character and a 5-letter Word
@@ -65,9 +67,20 @@ public class Word {
         return this.word;
     }
 
-    public char[] getResults() {
+    public String getResults() {
         return this.result;
     }
 
+    public void setResult(String r) {
+        this.result = r;
+    }
 
+
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("word", word);
+        json.put("result", result);
+        return json;
+    }
 }
