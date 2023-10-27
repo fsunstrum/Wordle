@@ -1,17 +1,17 @@
 {
     "words": [
         {
-            "result": "RRRRR",
+            "result": "YRGRR",
             "word": "PLANT"
         },
         {
-            "result": "RYRRR",
-            "word": "CRAMP"
+            "result": "YGGRR",
+            "word": "PRANK"
         },
         {
-            "result": "RYYRR",
-            "word": "GREAT"
+            "result": "GGGRR",
+            "word": "CRANK"
         }
     ],
-    "mystWord": "HORSE"
+    "mystWord": "CRAMP"
 }

@@ -55,6 +55,7 @@ public class Game {
             System.out.println("Here are your previous guesses:");
             for (Word w : wordLog.getWords()) {
                 System.out.println(w.getWord());
+                System.out.println(w.getResults());
             }
             continueGame(keepGoing);
         } else {
@@ -63,6 +64,7 @@ public class Game {
         }
     }
 
+    //Effects: handles primary game mechanics
     private void continueGame(boolean keepGoing) {
         while (keepGoing) {
             String stringGuess = scanner.nextLine();
@@ -82,6 +84,7 @@ public class Game {
         }
     }
 
+    //Effects: processes user inputs
     private void processInput(String input) {
         if (input.equals("s")) {
             saveWordList();

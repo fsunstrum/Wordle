@@ -1,7 +1,6 @@
-package model;
+package persistence;
 import model.*;
 import org.junit.jupiter.api.Test;
-import persistence.*;
 
 import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;

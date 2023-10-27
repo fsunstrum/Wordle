@@ -1,7 +1,8 @@
-package model;
+package persistence;
 
+import model.Word;
+import model.WordList;
 import org.junit.jupiter.api.Test;
-import persistence.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -63,6 +64,5 @@ public class JsonWriterTest extends JsonTest {
         } catch (IOException e) {
             fail("Exception should not have been thrown");
         }
-
     }
 }

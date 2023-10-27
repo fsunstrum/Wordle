@@ -10,7 +10,7 @@ import static java.lang.Boolean.*;
 public class Word implements Writable {
     private String word;
     private String result;
-    private boolean solved;
+    //private boolean solved;
 
     static int MAXINDEX = 4;
 
@@ -19,8 +19,8 @@ public class Word implements Writable {
     //Effects: creates a new Word object with a string value and an empty list of results
     public Word(String word) {
         this.word = word;
-        this.result = new String();
-        this.solved = false;
+        this.result = "";
+        //this.solved = false;
     }
 
 
@@ -44,15 +44,15 @@ public class Word implements Writable {
         this.result = new String(values);
     }
 
-    //Requires: a Word that has been checked
+
     //Effects: produce TRUE if word has been guessed. IE result = {'G','G','G','G','G'}. Else FALSE
     public boolean isSolved() {
-        this.solved = this.result.equals("GGGGG");
-        return this.solved;
+        return this.result.equals("GGGGG");
+//        this.solved = this.result.equals("GGGGG");
+//        return this.solved;
     }
 
     //Requires: a character and a 5-letter Word
-    //Modifies: ...
     //Effects: return True if the given character is found in the Word, else False
     public Boolean isPresent(char given, String m) {
         for (int i = 0; i <= MAXINDEX; i++) {
@@ -75,7 +75,7 @@ public class Word implements Writable {
         this.result = r;
     }
 
-
+    //Templated from JsonSerializationDemo.Thingy.java
     @Override
     public JSONObject toJson() {
         JSONObject json = new JSONObject();

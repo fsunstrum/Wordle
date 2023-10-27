@@ -21,7 +21,7 @@ public class WordTest {
     void testConstructor() {
         assertEquals("PLANT", testMyst.getWord());
         String res = testWord1.getResults();
-        assertEquals(5, res.length());
+        assertEquals(0, res.length());
     }
 
 

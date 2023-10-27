@@ -9,10 +9,10 @@ import java.util.ArrayList;
 //Represents a list of Words
 public class WordList implements Writable {
     private final ArrayList<Word> words;
-    private String mystWord;
+    private final String mystWord;
 
     //Modifies: this
-    //Effects: creates a new empty WordList object, with a null mystery word
+    //Effects: creates a new empty WordList object, with a given mystery word
     public WordList(String m) {
         words = new ArrayList<>();
         this.mystWord = m;
@@ -55,6 +55,7 @@ public class WordList implements Writable {
         return words.get(index);
     }
 
+    // Templated from JsonSerializationDemo.WorkRoom.java
     @Override
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
@@ -63,6 +64,7 @@ public class WordList implements Writable {
         return json;
     }
 
+    // Templated from JsonSerializationDemo.WorkRoom.java
     // EFFECTS: returns words in this wordlist as a JSON array
     private JSONArray wordsToJson() {
         JSONArray jsonArray = new JSONArray();

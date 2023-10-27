@@ -6,6 +6,8 @@ import org.json.JSONObject;
 import java.io.*;
 
 // Represents a writer that writes JSON representation of wordList to file
+//Templated from JsonSerializationDemo.JsonWriter.java
+
 public class JsonWriter {
     private static final int TAB = 4; ///????????
     private PrintWriter writer;
