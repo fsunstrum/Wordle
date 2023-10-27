@@ -13,8 +13,8 @@ public class WordListTest {
 
     @BeforeEach
     void runBefore(){
-        testWords = new WordList();
-        wordBank = new WordList();
+        testWords = new WordList("HORSE");
+        wordBank = new WordList("HAHAH");
         wordBank.addWord(new Word("PLANT"));
         wordBank.addWord(new Word("HORSE"));
     }

@@ -8,9 +8,9 @@ import static java.lang.Boolean.*;
 
 //Represents a 5-letter word, and information on which of its characters are present in the mystery word.
 public class Word implements Writable {
-    String word;
-    String result;
-    boolean solved;
+    private String word;
+    private String result;
+    private boolean solved;
 
     static int MAXINDEX = 4;
 

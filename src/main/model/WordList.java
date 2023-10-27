@@ -63,6 +63,7 @@ public class WordList implements Writable {
         return json;
     }
 
+    // EFFECTS: returns words in this wordlist as a JSON array
     private JSONArray wordsToJson() {
         JSONArray jsonArray = new JSONArray();
         for (Word w : words) {

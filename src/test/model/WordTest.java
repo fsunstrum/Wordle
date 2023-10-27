@@ -19,7 +19,7 @@ public class WordTest {
 
     @Test
     void testConstructor() {
-        assertEquals("PLANT", testMyst.word);
+        assertEquals("PLANT", testMyst.getWord());
         String res = testWord1.getResults();
         assertEquals(5, res.length());
     }
@@ -29,30 +29,30 @@ public class WordTest {
     void checkWordTest() {
         testWord1.checkWord("PLANT");
         String expectedResult1 = "RRGGR";
-        assertEquals(testWord1.result, expectedResult1);
+        assertEquals(testWord1.getResults(), expectedResult1);
         testWord2.checkWord("PLANT");
         String expectedResult2 = "RGRYR";
-        assertEquals(testWord2.result, expectedResult2);
+        assertEquals(testWord2.getResults(), expectedResult2);
 
         Word testWord3 = new Word("PPPPP");
         String expectedResult3 = "GYYYY";
         testWord3.checkWord("PLANT");
-        assertEquals(testWord3.result, expectedResult3);
+        assertEquals(testWord3.getResults(), expectedResult3);
 
         Word testWord4 = new Word("XXXXX");
         String expectedResult4 = "RRRRR";
         testWord4.checkWord("PLANT");
-        assertEquals(testWord4.result, expectedResult4);
+        assertEquals(testWord4.getResults(), expectedResult4);
 
         Word testWord5 = new Word("PLANT");
         String expectedResult5 = "GGGGG";
         testWord5.checkWord("PLANT");
-        assertEquals(testWord5.result, expectedResult5);
+        assertEquals(testWord5.getResults(), expectedResult5);
 
         Word testWord6 = new Word("PLANT");
         String expectedResult6 = "RGRRR";
         testWord6.checkWord("CLOCK");
-        assertEquals(expectedResult6, testWord6.result);
+        assertEquals(expectedResult6, testWord6.getResults());
 
     }
 
@@ -80,9 +80,9 @@ public class WordTest {
         assertEquals("RRGGR", testWord1.getResults());
     }
 
-    @Test
-    public void getWordTest() {
-        assertEquals(testWord1.getWord(),testWord1.word);
-    }
+//    @Test
+//    public void getWordTest() {
+//        assertEquals(testWord1.getWord(),testWord1.word);
+//    }
 
 }
