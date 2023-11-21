@@ -4,24 +4,36 @@ import model.Word;
 import model.WordList;
 import persistence.JsonReader;
 import persistence.JsonWriter;
+import ui.learningandtroubleshooting.GamePanel;
+
+//import java.awt.Dimension;
+//import java.awt.Toolkit;
+//import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
+//import java.awt.event.KeyAdapter;
+//import java.awt.event.KeyEvent;
+
+//import javax.swing.Timer;
+
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
 //WORDLE game remake
-public class Game {
+public class GameConsole {
     private static final String JSON_STORE = "./data/wordlist.json";
     public final Scanner scanner;
     private WordList wordBank;
     private WordList wordLog;
     private Word currentGuess;
+    //private GamePanel gp;
 
     private JsonWriter jsonWriter;
     private JsonReader jsonReader;
 
     //Effects: creates a new Game object and runs the game
-    public Game() throws FileNotFoundException {
+    public GameConsole() throws FileNotFoundException {
         wordBank = new WordList("");
         wordBank.addWord(new Word("PLANT"));
         wordBank.addWord(new Word("HORSE"));
@@ -39,6 +51,12 @@ public class Game {
 
         jsonWriter = new JsonWriter(JSON_STORE);
         jsonReader = new JsonReader(JSON_STORE);
+
+//        gp = new GamePanel(wordLog);
+//        addKeyListener(new KeyHandler());
+//        pack();
+//        centreOnScreen();
+//        setVisible(true);
         runGame();
     }
 

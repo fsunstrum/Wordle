@@ -11,6 +11,9 @@ public class WordList implements Writable {
     private final ArrayList<Word> words;
     private final String mystWord;
 
+    public static final int WIDTH = 800;
+    public static final int HEIGHT = 600;
+
     //Modifies: this
     //Effects: creates a new empty WordList object, with a given mystery word
     public WordList(String m) {
