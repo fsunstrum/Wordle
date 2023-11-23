@@ -84,7 +84,4 @@ public class Word implements Writable {
         return json;
     }
 
-    public void temporarySetResultForTesting() {
-        this.result = "RGYYG";
-    }
-}
+
