@@ -83,5 +83,4 @@ public class Word implements Writable {
         json.put("result", result);
         return json;
     }
-
-
+}
