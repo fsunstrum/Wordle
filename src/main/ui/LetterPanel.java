@@ -36,7 +36,6 @@ public class LetterPanel extends JPanel {
 
         for (int i = 0; i < 5; i++) {
             addLabel(word[i],colors[i]);
-
         }
 
 
@@ -48,6 +47,7 @@ public class LetterPanel extends JPanel {
         JLabel l = new JLabel(String.valueOf(s));
         l.setForeground(Color.BLACK);
         l.setBackground(checkColour(color));
+        l.setFont(new Font("Arial",Font.BOLD,24));
         l.setOpaque(true);
         this.add(l);
     }

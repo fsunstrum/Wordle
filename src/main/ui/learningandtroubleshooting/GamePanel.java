@@ -36,9 +36,16 @@ public class GamePanel {
             Word input = new Word(textField.getText().toUpperCase());
             parent.processInput(input);
             words.add(new LetterPanel(input));
+            textField.setText("");
+            if (input.isSolved()) {
+                JLabel endMessage = new JLabel("Congratulations!");
+                endMessage.setBackground(new Color(0x00CC00));
+                endMessage.setOpaque(true);
+                words.add(endMessage);
+            }
             mainFrame.revalidate();
             mainFrame.repaint();
-            //parent.check
+
 
         });
 
