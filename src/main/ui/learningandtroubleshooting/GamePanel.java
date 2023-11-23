@@ -31,6 +31,19 @@ public class GamePanel {
         JPanel textHandling = new JPanel();
         JTextField textField = new JTextField(5);
         textHandling.add(textField);
+        JButton submit = makeSubmitButton(parent, textField);
+
+        textHandling.add(submit);
+        //textHandling.setVisible(true);
+
+        mainFrame.add(textHandling);
+        mainFrame.setVisible(true);
+
+
+        this.game = game;
+    }
+
+    private JButton makeSubmitButton(GameWithUI parent, JTextField textField) {
         JButton submit = new JButton("submit attempt");
         submit.addActionListener(e -> {
             Word input = new Word(textField.getText().toUpperCase());
@@ -45,18 +58,8 @@ public class GamePanel {
             }
             mainFrame.revalidate();
             mainFrame.repaint();
-
-
         });
-
-        textHandling.add(submit);
-        //textHandling.setVisible(true);
-
-        mainFrame.add(textHandling);
-        mainFrame.setVisible(true);
-
-
-        this.game = game;
+        return submit;
     }
 
     private void initializeWordListUI() {
