@@ -1,27 +1,23 @@
-package ui.learningandtroubleshooting;
+package ui;
 
 import model.Word;
-import model.WordList;
-import ui.GameWithUI;
-import ui.LetterPanel;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-
+// Initializes the main JFrame and components, and specifies the behaviours of buttons and text field
 public class GamePanel {
-    private WordList game;
     public static final int WIDTH = 600;
     public static final int HEIGHT = 800;
-    private Word testWord = new Word("APPLE");
-    private Word testWord2 = new Word("YEEET");
-    private GameWithUI parent;
+    private final GameWithUI parent;
     JFrame mainFrame = initializeFrame();
     JPanel words = new JPanel();
 
 
-    public GamePanel(WordList game, GameWithUI parent) {
+    //MODIFIES: this
+    //EFFECTS: creates the JFrame UI object
+    public GamePanel(GameWithUI parent) {
         this.parent = parent;
 
         addTopButtons(mainFrame);
@@ -34,15 +30,14 @@ public class GamePanel {
         JButton submit = makeSubmitButton(parent, textField);
 
         textHandling.add(submit);
-        //textHandling.setVisible(true);
 
         mainFrame.add(textHandling);
         mainFrame.setVisible(true);
-
-
-        this.game = game;
     }
 
+    //REQUIRES: an initialized game
+    //MODIFIES: this
+    //EFFECTS: generates and specifies the behaviour of the submit button.
     private JButton makeSubmitButton(GameWithUI parent, JTextField textField) {
         JButton submit = new JButton("submit attempt");
         submit.addActionListener(e -> {
@@ -51,7 +46,7 @@ public class GamePanel {
             words.add(new LetterPanel(input));
             textField.setText("");
             if (input.isSolved()) {
-                JLabel endMessage = new JLabel("Congratulations!");
+                JLabel endMessage = new JLabel(parent.congratulate());
                 endMessage.setBackground(new Color(0x00CC00));
                 endMessage.setOpaque(true);
                 words.add(endMessage);
@@ -62,30 +57,17 @@ public class GamePanel {
         return submit;
     }
 
+    //MODIFIES:this
+    //EFFECTS: creates and lays out the panel showing the entered words and feedback
     private void initializeWordListUI() {
         GridLayout gridLayout = new GridLayout(0, 1);
-        //gridLayout.setVgap(5);
         words.setLayout(gridLayout);
         mainFrame.add(words);
-        //f.setLayout(null);
-
-        //tempraryfortesting
-        testWord.temporarySetResultForTesting();
-        testWord2.temporarySetResultForTesting();
-
-
         words.setBackground(Color.lightGray);
-        //words.add(new LetterPanel(testWord));
-        //words.add(Box.createRigidArea(new Dimension(5, 0))); // Add rigid space between components
-        //words.add(new LetterPanel(testWord2));
-
-        //words.setPreferredSize(new Dimension(150, HEIGHT)); // Adjust HEIGHT as needed
-
-
-//        setPreferredSize(new Dimension(WIDTH, HEIGHT));
-//        setBackground(Color.pink);
     }
 
+    //MODIFIES: this
+    //EFFECTS: intializes primary JFrame
     private static JFrame initializeFrame() {
         JFrame f = new JFrame("WORDLE");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -94,42 +76,31 @@ public class GamePanel {
         return f;
     }
 
+
+    //MODIFIES: this
+    //EFFECTS:  creates and specifies the behaviour of the quit, save, and load buttons, lays them out in a JPanel,
+    //          and adds the JPanel to the parent JFrame
     private void addTopButtons(JFrame f) {
         JPanel buttons = new JPanel();
-        //buttons.setBounds(10, 10, WIDTH, HEIGHT);
         buttons.setBackground(Color.pink);
         JButton quit = new JButton("quit");
-        quit.addActionListener(e -> {
-            System.exit(0);
-        });
-        //quit.setBackground(Color.red);
-        //quit.setBounds(50,100,80,30);
+        quit.addActionListener(e -> System.exit(0));
         JButton save = new JButton("save game");
-        //save.setBackground(Color.green);
-        //save.setBounds(100,100,80,30);
-        save.addActionListener(e -> {
-            parent.saveWordList();
-        });
+        save.addActionListener(e -> parent.saveWordList());
         JButton load = new JButton("load game");
         load.addActionListener(e -> {
             parent.loadWordList();
+            ArrayList<Word> loadedWords = parent.getWordLog();
+
+            for (Word w : loadedWords) {
+                words.add(new LetterPanel(w));
+            }
+
             mainFrame.revalidate();
-            mainFrame.repaint();
         });
-        //load.setBackground(Color.orange);
-        //load.setBounds(200,100,80,30);
         buttons.add(quit);
         buttons.add(save);
         buttons.add(load);
         f.add(buttons);
     }
-
-//    public void updateWords(WordList words) {
-//        this.game = words;
-//        ArrayList<Word> allWords = words.getWords();
-//        for (Word w : allWords) {
-//            words.addWord(w);
-//        }
-//    }
-
 }
