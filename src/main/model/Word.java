@@ -29,6 +29,7 @@ public class Word implements Writable {
     //Effects: populates this.result with each letter's respective validity (G, Y, R). G for green, letter is in right
     //         position, Y for yellow, letter is in word but different position, R for Red, letter is not in word.
     public void checkWord(String m) {
+        EventLog.getInstance().logEvent(new Event("Guess word has been entered and checked"));
         char[] values = new char[5];
         for (int index = 0; index <= MAXINDEX; index++) {
             if (this.word.charAt(index) == m.charAt(index)) {
@@ -47,9 +48,8 @@ public class Word implements Writable {
 
     //Effects: produce TRUE if word has been guessed. IE result = {'G','G','G','G','G'}. Else FALSE
     public boolean isSolved() {
+        EventLog.getInstance().logEvent(new Event("Mystery word has been guessed by user"));
         return this.result.equals("GGGGG");
-//        this.solved = this.result.equals("GGGGG");
-//        return this.solved;
     }
 
     //Requires: a character and a 5-letter Word

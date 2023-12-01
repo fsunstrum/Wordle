@@ -21,11 +21,7 @@ public class WordList implements Writable {
         this.mystWord = m;
     }
 
-    //Modifies: this
-    //Effects: sets the random mystery word
-    //public void setMystWord(String w) {
-//        String this.mystWord = w;
-//    }
+
 
     //Effects: returns the mystry word associated with the current game
     public String getMystWord() {
@@ -54,6 +50,7 @@ public class WordList implements Writable {
 
     //Effects: returns a random member of this wordlist
     public Word getRandomWord() {
+        EventLog.getInstance().logEvent(new Event("Mystery word has been randomly selected"));
         int index = (int) (Math.random() * (words.size()));
         return words.get(index);
     }
@@ -70,6 +67,8 @@ public class WordList implements Writable {
     // Templated from JsonSerializationDemo.WorkRoom.java
     // EFFECTS: returns words in this wordlist as a JSON array
     private JSONArray wordsToJson() {
+        EventLog.getInstance().logEvent(new Event("Game state saved"));
+
         JSONArray jsonArray = new JSONArray();
         for (Word w : words) {
             jsonArray.put(w.toJson());

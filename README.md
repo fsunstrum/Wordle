@@ -27,3 +27,11 @@ As a word puzzle enthusiast myself, I look forward to figuring out how such a pu
 
 - I want to have the option of saving an in-progress game
 - I want the option to load a saved game when starting up a new game
+
+## Instructions for Grader
+- You can enter a 5-letter word in the text field at the bottom, then press the submit button.
+- Look above the text field to see visual feedback on your guess. 
+- Based on above feedback, enter more guesses until you are congratulated for guessing the mystery word.
+- You will know you have guessed the word when a green banner will tell you how many guessed you used, and a cool guy emoji will appear next to the submit button. 
+- At any time during a game, you can press the save button at the top to save the current game state to memory.
+- At any time during a game, you can press the load button at the top to load a previously saved game. 

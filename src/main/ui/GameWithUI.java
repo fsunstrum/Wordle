@@ -23,6 +23,7 @@ public class GameWithUI {
 
     //Effects: creates a new Game object and runs the game
     public GameWithUI() throws FileNotFoundException {
+
         wordBank = new WordList("");
 
         gamePanel = new GamePanel(this);

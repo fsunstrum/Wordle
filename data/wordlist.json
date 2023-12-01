@@ -1,13 +1,7 @@
 {
-    "words": [
-        {
-            "result": "RRRRG",
-            "word": "PLANT"
-        },
-        {
-            "result": "RRGRG",
-            "word": "GREAT"
-        }
-    ],
-    "mystWord": "QUEST"
+    "words": [{
+        "result": "RRRRR",
+        "word": "PORKS"
+    }],
+    "mystWord": "BLUNT"
 }
