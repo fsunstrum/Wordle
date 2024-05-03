@@ -1,25 +1,7 @@
 {
-    "words": [
-        {
-            "result": "RRRRR",
-            "word": "TATAT"
-        },
-        {
-            "result": "RYRRR",
-            "word": "BELIN"
-        },
-        {
-            "result": "RRYGR",
-            "word": "QUEST"
-        },
-        {
-            "result": "RRRGR",
-            "word": "BLAST"
-        },
-        {
-            "result": "GGGGG",
-            "word": "WORSE"
-        }
-    ],
-    "mystWord": "WORSE"
+    "words": [{
+        "result": "GRGGR",
+        "word": "PLANT"
+    }],
+    "mystWord": "PRANK"
 }

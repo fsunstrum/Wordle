@@ -80,9 +80,4 @@ public class WordTest {
         assertEquals("RRGGR", testWord1.getResults());
     }
 
-//    @Test
-//    public void getWordTest() {
-//        assertEquals(testWord1.getWord(),testWord1.word);
-//    }
-
 }
