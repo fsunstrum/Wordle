@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30f744c0-64ec-477b-acf8-987d2108e80c" name="Changes" comment="Phase 4: Task 3">
+      <change beforePath="$PROJECT_DIR$/src/main/model/WordList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/WordList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/persistence/JsonReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/persistence/JsonReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ui/GameWithUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ui/GameWithUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/model/WordListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/model/WordListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/persistence/JsonWriterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/persistence/JsonWriterTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/ui/Game.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2W5F529k3TTDOaGL23MxthiC9HK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/fredsunstrum/IdeaProjects/project_k0l3e/src/test/model&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/lib/spec" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ui" />
+      <recent name="ui.learningandtroubleshooting" />
+      <recent name="persistence" />
+      <recent name="model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.Main" />
+      <module name="Project-Starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in Project-Starter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project-Starter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonReaderTest.testReaderEmptyWorkWoom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project-Starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="persistence" />
+      <option name="MAIN_CLASS_NAME" value="persistence.JsonReaderTest" />
+      <option name="METHOD_NAME" value="testReaderEmptyWorkWoom" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonWriterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project-Starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="persistence" />
+      <option name="MAIN_CLASS_NAME" value="persistence.JsonWriterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project-Starter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.WordTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.All in Project-Starter" />
+        <item itemvalue="JUnit.JsonWriterTest" />
+        <item itemvalue="JUnit.JsonReaderTest.testReaderEmptyWorkWoom" />
+        <item itemvalue="JUnit.WordTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30f744c0-64ec-477b-acf8-987d2108e80c" name="Changes" comment="" />
+      <created>1696014346518</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696014346518</updated>
+    </task>
+    <task id="LOCAL-00001" summary="phase 0.1">
+      <option name="closed" value="true" />
+      <created>1696019742424</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696019742424</updated>
+    </task>
+    <task id="LOCAL-00002" summary="phase 1.1 &#10;completed? Word class">
+      <option name="closed" value="true" />
+      <created>1696981341679</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696981341679</updated>
+    </task>
+    <task id="LOCAL-00003" summary="phase 1.2&#10;completed ui package">
+      <option name="closed" value="true" />
+      <created>1697068058571</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697068058571</updated>
+    </task>
+    <task id="LOCAL-00004" summary="phase 1.2&#10;completed ui package... testing">
+      <option name="closed" value="true" />
+      <created>1697142727993</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697142727993</updated>
+    </task>
+    <task id="LOCAL-00005" summary="phase 1.2&#10;completed ui package... suppressed checkstyle to see feedback">
+      <option name="closed" value="true" />
+      <created>1697149468721</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697149468721</updated>
+    </task>
+    <task id="LOCAL-00006" summary="phase 1.2&#10;completed ui package... suppressed checkstyle to see feedback...">
+      <option name="closed" value="true" />
+      <created>1697149744233</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697149744233</updated>
+    </task>
+    <task id="LOCAL-00007" summary="phase 1.2&#10;completed ui package... suppressed checkstyle to see feedback... added getter test to get 100% coverage">
+      <option name="closed" value="true" />
+      <created>1697150337628</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697150337628</updated>
+    </task>
+    <task id="LOCAL-00008" summary="phase 1.3&#10;completed ui package... suppressed checkstyle for runGame method. added small random word bank and wordlist class">
+      <option name="closed" value="true" />
+      <created>1697227042556</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697227042556</updated>
+    </task>
+    <task id="LOCAL-00009" summary="phase 1.4&#10;&#10;bug fixed, almost done">
+      <option name="closed" value="true" />
+      <created>1697234586073</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1697234586073</updated>
+    </task>
+    <task id="LOCAL-00010" summary="phase 1.5 i think i'm done">
+      <option name="closed" value="true" />
+      <created>1697237808595</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697237808595</updated>
+    </task>
+    <task id="LOCAL-00011" summary="phase2 task 4&#10;readme updated">
+      <option name="closed" value="true" />
+      <created>1698087520913</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1698087520913</updated>
+    </task>
+    <task id="LOCAL-00012" summary="phase2 &#10;json implemented, need to complete tests and specs">
+      <option name="closed" value="true" />
+      <created>1698109273203</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1698109273203</updated>
+    </task>
+    <task id="LOCAL-00013" summary="phase2 &#10;Tests mostly implemented">
+      <option name="closed" value="true" />
+      <created>1698437848042</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1698437848042</updated>
+    </task>
+    <task id="LOCAL-00014" summary="phase2 &#10;Should be done.&#10;&#10;Tests good. Specifications good. Reloading now prints results.">
+      <option name="closed" value="true" />
+      <created>1698439063613</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1698439063613</updated>
+    </task>
+    <task id="LOCAL-00015" summary="phase3&#10;&#10;GUI is functional, still need to check tests documentation, and maybe make it look better">
+      <option name="closed" value="true" />
+      <created>1700587735474</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700587735474</updated>
+    </task>
+    <task id="LOCAL-00016" summary="phase3&#10;&#10;GUI is functional, still need to check tests documentation, and maybe make it look better">
+      <option name="closed" value="true" />
+      <created>1700762982335</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700762982335</updated>
+    </task>
+    <task id="LOCAL-00017" summary="phase3.2 fixed checkstyle">
+      <option name="closed" value="true" />
+      <created>1700763229721</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1700763229721</updated>
+    </task>
+    <task id="LOCAL-00018" summary="phase3.2 removed temporary line of code">
+      <option name="closed" value="true" />
+      <created>1700763328267</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1700763328267</updated>
+    </task>
+    <task id="LOCAL-00019" summary="phase3.2 removed temporary line of code.&#10;Now need to check documentation!">
+      <option name="closed" value="true" />
+      <created>1700763363912</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1700763363912</updated>
+    </task>
+    <task id="LOCAL-00020" summary="phase3 all done">
+      <option name="closed" value="true" />
+      <created>1700859816461</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1700859816461</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Phase 4: Task 2">
+      <option name="closed" value="true" />
+      <created>1701406510442</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1701406510442</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Phase 4: Task 3">
+      <option name="closed" value="true" />
+      <created>1701411966677</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1701411966677</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Phase 4: Task 3">
+      <option name="closed" value="true" />
+      <created>1714771528778</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1714771528778</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="phase 0.1" />
+    <MESSAGE value="phase 1.1 &#10;completed? Word class" />
+    <MESSAGE value="phase 1.2&#10;completed ui package" />
+    <MESSAGE value="phase 1.2&#10;completed ui package... testing" />
+    <MESSAGE value="phase 1.2&#10;completed ui package... suppressed checkstyle to see feedback" />
+    <MESSAGE value="phase 1.2&#10;completed ui package... suppressed checkstyle to see feedback..." />
+    <MESSAGE value="phase 1.2&#10;completed ui package... suppressed checkstyle to see feedback... added getter test to get 100% coverage" />
+    <MESSAGE value="phase 1.3&#10;completed ui package... suppressed checkstyle for runGame method. added small random word bank and wordlist class" />
+    <MESSAGE value="phase 1.4&#10;&#10;bug fixed, almost done" />
+    <MESSAGE value="phase 1.5 i think i'm done" />
+    <MESSAGE value="phase2 task 4&#10;readme updated" />
+    <MESSAGE value="phase2 &#10;json implemented, need to complete tests and specs" />
+    <MESSAGE value="phase2 &#10;Tests mostly implemented" />
+    <MESSAGE value="phase2&#10;Tests mostly implemented" />
+    <MESSAGE value="phase2 &#10;Should be done.&#10;&#10;Tests good. Specifications good. Reloading now prints results." />
+    <MESSAGE value="phase3&#10;&#10;GUI is functional, still need to check tests documentation, and maybe make it look better" />
+    <MESSAGE value="phase3.2 fixed checkstyle" />
+    <MESSAGE value="phase3.2 removed temporary line of code" />
+    <MESSAGE value="phase3.2 removed temporary line of code.&#10;Now need to check documentation!" />
+    <MESSAGE value="phase3 all done" />
+    <MESSAGE value="Phase 4: Task 2" />
+    <MESSAGE value="Phase 4: Task 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Phase 4: Task 3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/model/EventLog.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

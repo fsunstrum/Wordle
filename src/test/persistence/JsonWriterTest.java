@@ -15,7 +15,8 @@ public class JsonWriterTest extends JsonTest {
     @Test
     void testWriterInvalidFile() {
         try {
-            WordList wl = new WordList("CANOE");
+            WordList wl = new WordList();
+            wl.setMystWord("CANOE");
             JsonWriter writer = new JsonWriter("./data/my\0illegal:fileName.json");
             writer.open();
             fail("IOException was expected");
@@ -27,7 +28,8 @@ public class JsonWriterTest extends JsonTest {
     @Test
     void testWriterEmptyWordList() {
         try {
-            WordList wl = new WordList("APPLE");
+            WordList wl = new WordList();
+            wl.setMystWord("APPLE");
             JsonWriter writer = new JsonWriter("./data/testWriterEmptyWorkroom.json");
             writer.open();
             writer.write(wl);
@@ -45,7 +47,8 @@ public class JsonWriterTest extends JsonTest {
     @Test
     void testWriterGeneralWordList() {
         try {
-            WordList wl = new WordList("WORDS");
+            WordList wl = new WordList();
+            wl.setMystWord("WORDS");
             wl.addWord(new Word("SNOOP"));
             wl.addWord(new Word("MOOSE"));
             JsonWriter writer = new JsonWriter("./data/testWriterGeneralWordList.json");

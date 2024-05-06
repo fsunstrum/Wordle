@@ -13,8 +13,10 @@ public class WordListTest {
 
     @BeforeEach
     void runBefore(){
-        testWords = new WordList("HORSE");
-        wordBank = new WordList("HAHAH");
+        testWords = new WordList();
+        testWords.setMystWord("HORSE");
+        wordBank = new WordList();
+        wordBank.setMystWord("HAHAH");
         wordBank.addWord(new Word("PLANT"));
         wordBank.addWord(new Word("HORSE"));
     }
@@ -38,12 +40,12 @@ public class WordListTest {
         assertEquals(2, test.size());
     }
 
-    @Test
-    public void getRandomWordTest() {
-        Word testWord = wordBank.getRandomWord();
-        assertTrue(wordBank.getWords().contains(testWord));
-
-    }
+ //   @Test
+//    public void getRandomWordTest() {
+//        Word testWord = wordBank.getRandomWord();
+//        assertTrue(wordBank.getWords().contains(testWord));
+//
+//    }
 
 
     }

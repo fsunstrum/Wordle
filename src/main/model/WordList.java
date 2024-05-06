@@ -2,30 +2,53 @@ package model;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import persistence.JsonReader;
 import persistence.Writable;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+//import static ui.GameWithUI.JSON_STORE;
 
 //Represents a list of Words
 public class WordList implements Writable {
     private final ArrayList<Word> words;
-    private final String mystWord;
+    private String mystWord;
+    private static final String JSON_STORE = "./data/5-letter-words.json";
 
-    public static final int WIDTH = 800;
-    public static final int HEIGHT = 600;
+    private JsonReader jsonReader;
+
+//    public static final int WIDTH = 800;
+//    public static final int HEIGHT = 600;
 
     //Modifies: this
     //Effects: creates a new empty WordList object, with a given mystery word
-    public WordList(String m) {
+    public WordList() {
         words = new ArrayList<>();
-        this.mystWord = m;
+        jsonReader = new JsonReader(JSON_STORE);
+        int index = ThreadLocalRandom.current().nextInt(0, 9999 + 1);
+
+
+        try {
+            this.mystWord = jsonReader.getWord(index);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        this.mystWord = this.mystWord.toUpperCase();
     }
 
 
 
-    //Effects: returns the mystry word associated with the current game
+    //Effects: returns the mystery word associated with the current game
     public String getMystWord() {
         return this.mystWord;
+    }
+
+    public void setMystWord(String s) {
+        this.mystWord = s;
     }
 
     //Modifies: this
@@ -49,11 +72,11 @@ public class WordList implements Writable {
     }
 
     //Effects: returns a random member of this wordlist
-    public Word getRandomWord() {
-        EventLog.getInstance().logEvent(new Event("Mystery word has been randomly selected"));
-        int index = (int) (Math.random() * (words.size()));
-        return words.get(index);
-    }
+//    public Word getRandomWord() {
+//        EventLog.getInstance().logEvent(new Event("Mystery word has been randomly selected"));
+//        int index = (int) (Math.random() * (words.size()));
+//        return words.get(index);
+//    }
 
     // Templated from JsonSerializationDemo.WorkRoom.java
     @Override

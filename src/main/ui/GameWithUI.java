@@ -9,13 +9,15 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
+
 //WORDLE game remake
 public class GameWithUI {
     private static final String JSON_STORE = "./data/wordlist.json";
-    private WordList wordBank;
+    //private WordList wordBank;
+    private String mysteryWord;
     private WordList wordLog;
     //private Word currentGuess;
-
+    private int number;
     private JsonWriter jsonWriter;
     private JsonReader jsonReader;
 
@@ -24,22 +26,23 @@ public class GameWithUI {
     //Effects: creates a new Game object and runs the game
     public GameWithUI() throws FileNotFoundException {
 
-        wordBank = new WordList("");
+
+        //wordBank = new WordList("");
 
         gamePanel = new GamePanel(this);
 
-        wordBank.addWord(new Word("PLANT"));
-        wordBank.addWord(new Word("HORSE"));
-        wordBank.addWord(new Word("CORKS"));
-        wordBank.addWord(new Word("VENUE"));
-        wordBank.addWord(new Word("GREAT"));
-        wordBank.addWord(new Word("CRAMP"));
-        wordBank.addWord(new Word("PRANK"));
-        wordBank.addWord(new Word("QUEST"));
-        wordBank.addWord(new Word("BLUNT"));
-        wordBank.addWord(new Word("WORSE"));
+//        wordBank.addWord(new Word("PLANT"));
+//        wordBank.addWord(new Word("HORSE"));
+//        wordBank.addWord(new Word("CORKS"));
+//        wordBank.addWord(new Word("VENUE"));
+//        wordBank.addWord(new Word("GREAT"));
+//        wordBank.addWord(new Word("CRAMP"));
+//        wordBank.addWord(new Word("PRANK"));
+//        wordBank.addWord(new Word("QUEST"));
+//        wordBank.addWord(new Word("BLUNT"));
+//        wordBank.addWord(new Word("WORSE"));
 
-        wordLog = new WordList(wordBank.getRandomWord().getWord());
+        wordLog = new WordList();
 
 
         jsonWriter = new JsonWriter(JSON_STORE);

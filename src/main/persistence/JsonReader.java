@@ -20,6 +20,12 @@ public class JsonReader {
         this.source = source;
     }
 
+    public String getWord(int index) throws IOException {
+        String data = readFile(source);
+        JSONArray jsonarray = new JSONArray(data);
+        return jsonarray.getString(index);
+    }
+
     // EFFECTS: reads wordList from File and returns it;
     // throws IOException if an error occurs reading data from file
     public WordList read() throws IOException {
@@ -43,7 +49,8 @@ public class JsonReader {
     //EFFECTS: parses wordList from JSON object and returns it
     private WordList parseWordList(JSONObject jsonObject) {
         String mystWord = jsonObject.getString("mystWord");
-        WordList wl = new WordList(mystWord);
+        WordList wl = new WordList();
+        wl.setMystWord(mystWord);
         addWords(wl, jsonObject);
         return wl;
     }
